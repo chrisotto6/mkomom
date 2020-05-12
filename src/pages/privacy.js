@@ -217,7 +217,7 @@ const Privacy = () => (
       <h2 className="sans-serif">Contact Us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us:</p>
       <ul>
-        <li>By email: madelyn [dot] eriksen@gmail.com</li>
+        <li>By email: admin@mkomom.com</li>
       </ul>
     </div>
   </Layout>
