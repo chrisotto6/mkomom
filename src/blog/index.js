@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../common/layouts'
 import { Link, graphql } from 'gatsby'
 import Breadcrumbs from './components/breadcrumbs'
@@ -6,7 +7,7 @@ import Preview from './components/post-preview.js'
 import Seo from '../common/seo'
 import 'tachyons'
 
-export default class BlogIndex extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     const posts = this.props.data.posts.edges
     const hasNext = this.props.data.posts.pageInfo.hasNextPage
@@ -27,6 +28,7 @@ export default class BlogIndex extends React.Component {
           />
           {posts.map(({ node }) => (
             <Preview
+              key={node.frontmatter.slug}
               fluidImage={node.frontmatter.postImage.childImageSharp.fluid}
               slug={node.frontmatter.slug}
               title={node.frontmatter.title}
@@ -50,6 +52,13 @@ export default class BlogIndex extends React.Component {
     )
   }
 }
+
+BlogIndex.propTypes = {
+  pageContext: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+}
+
+export default BlogIndex
 
 export const blogListQuery = graphql`
   query posts($skip: Int!, $limit: Int!) {

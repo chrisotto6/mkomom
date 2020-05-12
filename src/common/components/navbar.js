@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { FiMenu } from 'react-icons/fi'
 import '../styles/custom.tachyons.css'
@@ -20,6 +21,12 @@ const MultiLink = (props) => {
     )
   }
   return result
+}
+
+MultiLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 }
 
 const SliderMenu = (props) => {
@@ -45,6 +52,7 @@ const SliderMenu = (props) => {
       </Link>
       {props.extraLinks.map((navLink) => (
         <MultiLink
+          key={navLink.to}
           to={navLink.to}
           className={'sans-serif ttu mid-gray f5 no-underline menu__item pv3' + extraClasses}
         >
@@ -59,6 +67,12 @@ const SliderMenu = (props) => {
       </Link>
     </div>
   )
+}
+
+SliderMenu.propTypes = {
+  active: PropTypes.object.isRequired,
+  siteTitle: PropTypes.string.isRequired,
+  extraLinks: PropTypes.object.isRequired,
 }
 
 export default class Navbar extends React.Component {
@@ -115,6 +129,7 @@ export default class Navbar extends React.Component {
                 </Link>
                 {data.site.siteMetadata.navbarLinks.map((navLink) => (
                   <MultiLink
+                    key={navLink.to}
                     to={navLink.to}
                     className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
                   >

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import 'tachyons'
 
-export default () => (
+const Bio = () => (
   <div className="pv5 pa2 flex flex-wrap mw9 center justify-around items-center">
     <StaticQuery
       query={graphql`
@@ -38,3 +38,5 @@ export default () => (
     />
   </div>
 )
+
+export default Bio

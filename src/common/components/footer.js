@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import { FaPinterestP, FaFacebookF, FaTwitter, FaYoutube, FaGithub } from 'react-icons/fa'
 import 'tachyons'
 
-export default () => (
+const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -103,3 +103,5 @@ export default () => (
     )}
   />
 )
+
+export default Footer

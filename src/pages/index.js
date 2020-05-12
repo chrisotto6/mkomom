@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../common/layouts'
 import { graphql } from 'gatsby'
 import Hero from '../homepage/components/hero'
@@ -7,7 +8,7 @@ import About from '../homepage/components/about'
 import Bio from '../homepage/components/bio'
 import Seo from '../common/seo'
 
-export default ({ data }) => {
+const Index = ({ data }) => {
   const post = data.featuredPost.edges[0].node
   return (
     <Layout>
@@ -21,6 +22,7 @@ export default ({ data }) => {
       <div className="flex flex-wrap center mw9 justify-around pb3">
         {data.cards.edges.map(({ node }) => (
           <Card
+            key={node.frontmatter.slug}
             title={node.frontmatter.title}
             image={node.frontmatter.postImage.childImageSharp.fluid}
             to={node.frontmatter.slug}
@@ -32,6 +34,10 @@ export default ({ data }) => {
       <Bio />
     </Layout>
   )
+}
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 export const query = graphql`
@@ -88,3 +94,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Index

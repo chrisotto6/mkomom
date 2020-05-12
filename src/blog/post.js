@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../common/layouts'
 import Hero from './components/hero.js'
 import Body from './components/body.js'
@@ -6,7 +7,7 @@ import Seo from './seo.js'
 import MetaSeo from '../common/seo'
 import { graphql } from 'gatsby'
 
-export default ({ location, data }) => {
+const Post = ({ location, data }) => {
   const {
     category,
     date,
@@ -38,6 +39,13 @@ export default ({ location, data }) => {
     </Layout>
   )
 }
+
+Post.propTypes = {
+  data: PropTypes.object.isRequired,
+  location: PropTypes.string.isRequired,
+}
+
+export default Post
 
 export const query = graphql`
   query($slug: String!) {

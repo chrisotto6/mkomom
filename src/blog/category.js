@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../common/layouts'
 import { Link, graphql } from 'gatsby'
 import Breadcrumbs from './components/breadcrumbs'
@@ -25,6 +26,7 @@ export default class BlogIndex extends React.Component {
           />
           {posts.map(({ node }) => (
             <Preview
+              key={node.frontmatter.slug}
               fluidImage={node.frontmatter.postImage.childImageSharp.fluid}
               slug={node.frontmatter.slug}
               title={node.frontmatter.title}
@@ -47,6 +49,11 @@ export default class BlogIndex extends React.Component {
       </Layout>
     )
   }
+}
+
+BlogIndex.propTypes = {
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
 }
 
 export const blogListQuery = graphql`

@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-export default (props) => (
+const Seo = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -47,3 +48,14 @@ export default (props) => (
     )}
   />
 )
+
+Seo.propTypes = {
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
+
+export default Seo

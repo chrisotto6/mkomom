@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../common/layouts'
 import Img from 'gatsby-image'
 import { graphql, Link } from 'gatsby'
 import Seo from '../common/seo'
 
-export default ({ props, data }) => (
+const About = ({ data }) => (
   <Layout>
     <Seo
       title={`About ${data.site.siteMetadata.title}`}
@@ -36,6 +37,12 @@ export default ({ props, data }) => (
     </div>
   </Layout>
 )
+
+About.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default About
 
 export const dataQuery = graphql`
   query {

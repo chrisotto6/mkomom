@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { FaPinterestP, FaFacebookF } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { StaticQuery, graphql } from 'gatsby'
 import 'tachyons'
 
-export default (props) => {
+const Sidebar = (props) => {
   let { desc, img, location } = props
   location = encodeURIComponent(location.pathname)
   desc = encodeURIComponent(desc)
@@ -55,3 +56,11 @@ export default (props) => {
     />
   )
 }
+
+Sidebar.propTypes = {
+  desc: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+}
+
+export default Sidebar

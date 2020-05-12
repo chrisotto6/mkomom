@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../common/layouts'
-import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 import Seo from '../common/seo'
 
-export default ({ props, data }) => (
+const NotFoundPage = ({ data }) => (
   <Layout>
     <Seo
       title={`About ${data.site.siteMetadata.title}`}
@@ -30,6 +30,10 @@ export default ({ props, data }) => (
   </Layout>
 )
 
+NotFoundPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
 export const dataQuery = graphql`
   query {
     site {
@@ -40,3 +44,5 @@ export const dataQuery = graphql`
     }
   }
 `
+
+export default NotFoundPage
