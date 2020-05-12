@@ -21,7 +21,7 @@ export default () => (
           to="/about"
           className="mt3 db no-underline ph5 pv3 sans-serif near-white bg-dark-gray ttu tracked b hover-bg-mid-gray"
         >
-          About Tyra
+          About Maddie
         </Link>
       </div>
     )}

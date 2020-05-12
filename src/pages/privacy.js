@@ -15,14 +15,11 @@ export default () => (
       <p className="db sans-serif f5 tracked ttu tc">Effective date: December 19, 2018</p>
     </div>
     <div className="lh-copy f4 serif mw8 center">
-      <p>
-        Gatsby Starter Tyra ("us", "we", or "our") operates the gatsby-starter-tyra.netlify.com
-        website (the "Service").
-      </p>
+      <p>MKO Mom ("us", "we", or "our") operates the mkomom.com website (the "Service").</p>
       <p>
         This page informs you of our policies regarding the collection, use, and disclosure of
         personal data when you use our Service and the choices you have associated with that data.
-        Our Privacy Policy for Gatsby Starter Tyra is based on the{' '}
+        Our Privacy Policy for MKO Mom is based on the{' '}
         <a
           className="light-red"
           href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/"
@@ -35,7 +32,7 @@ export default () => (
         We use your data to provide and improve the Service. By using the Service, you agree to the
         collection and use of information in accordance with this policy. Unless otherwise defined
         in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our
-        Terms and Conditions, accessible from gatsby-starter-tyra.netlify.com
+        Terms and Conditions, accessible from mkomom.com
       </p>
       <h2 className="sans-serif">Information Collection And Use</h2>
       <p>
@@ -91,7 +88,7 @@ export default () => (
         </li>
       </ul>
       <h2 className="sans-serif">Use of Data</h2>
-      <p>Gatsby Starter Tyra uses the collected data for various purposes:</p>
+      <p>MKO Mom uses the collected data for various purposes:</p>
       <ul>
         <li>To provide and maintain the Service</li>
         <li>To notify you about changes to our Service</li>
@@ -120,20 +117,20 @@ export default () => (
         represents your agreement to that transfer.
       </p>
       <p>
-        Gatsby Starter Tyra will take all steps reasonably necessary to ensure that your data is
-        treated securely and in accordance with this Privacy Policy and no transfer of your Personal
-        Data will take place to an organization or a country unless there are adequate controls in
-        place including the security of your data and other personal information.
+        MKO Mom will take all steps reasonably necessary to ensure that your data is treated
+        securely and in accordance with this Privacy Policy and no transfer of your Personal Data
+        will take place to an organization or a country unless there are adequate controls in place
+        including the security of your data and other personal information.
       </p>
       <h2 className="sans-serif">Disclosure Of Data</h2>
       <h3 className="sans-serif">Legal Requirements</h3>
       <p>
-        Gatsby Starter Tyra may disclose your Personal Data in the good faith belief that such
-        action is necessary to:
+        MKO Mom may disclose your Personal Data in the good faith belief that such action is
+        necessary to:
       </p>
       <ul>
         <li>To comply with a legal obligation</li>
-        <li>To protect and defend the rights or property of Gatsby Starter Tyra</li>
+        <li>To protect and defend the rights or property of MKO Mom</li>
         <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
         <li>To protect the personal safety of users of the Service or the public</li>
         <li>To protect against legal liability</li>
