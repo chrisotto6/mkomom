@@ -15,7 +15,7 @@ const Hero = (props) => {
         <span className="fw1 display dark-gray db tc w-100 mw7 f3 f2-ns">{title}</span>
         <p className="serif mw6 tc f5 dn dib-l mb4 db">{description}</p>
         <Link
-          className="db pv3 ph5 tracked ttu b bg-washed-red dark-gray sans-serif no-underline hover-gray"
+          className="db pv3 ph5 tracked ttu b bg-washed-green dark-gray sans-serif no-underline hover-gray"
           to={to}
         >
           Read More

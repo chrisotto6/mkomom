@@ -7,7 +7,7 @@ const Hero = (props) => {
   const { category, title, author, date } = props
 
   return (
-    <div className="bg-washed-red ph2 pv5 flex flex-column justify-center items-center">
+    <div className="bg-washed-green ph2 pv5 flex flex-column justify-center items-center">
       <Link to={`/${category}`} className="sans-serif ttu mid-gray tracked f6">
         {category}
       </Link>

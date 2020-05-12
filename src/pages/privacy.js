@@ -10,7 +10,7 @@ const Privacy = () => (
     <Helmet>
       <meta name="robots" content="noindex, nofollow" />
     </Helmet>
-    <div className="bg-washed-red pv5 flex flex-column items-center">
+    <div className="bg-washed-green pv5 flex flex-column items-center">
       <h1 className="db f1 display fw1">Privacy Policy</h1>
       <p className="db sans-serif f5 tracked ttu tc">Effective date: December 19, 2018</p>
     </div>
