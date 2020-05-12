@@ -8,7 +8,10 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint": "eslint ./src",
+    "lintFix": "eslint ./src --fix",
+    "test": "jest"
   },
   "dependencies": {
     "gatsby": "^2.19.49",
