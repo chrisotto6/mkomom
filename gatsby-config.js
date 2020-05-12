@@ -1,22 +1,23 @@
 module.exports = {
   siteMetadata: {
     navbarLinks: [
-      {to: "/makeup", name: "Makeup"},
-      {to: "/lifestyle", name: "Lifestyle"},
-      {to: "/blog", name: "blog"},
+      { to: '/makeup', name: 'Makeup' },
+      { to: '/lifestyle', name: 'Lifestyle' },
+      { to: '/blog', name: 'blog' },
     ],
-    title: "TYRA",
-    description: "Tyra is a fast, feminine, and chic Gatsby.js theme.",
-    siteUrl: "https://tyra-starter.netlify.com",
-    homepageHeader: "Welcome to Your New Blog",
-    homepageAbout: "Tyra is a modern, sleek and feminine Gatsby.js theme. Easily create a beautiful and fast blog and draw attention to your stellar content.",
-    mailChimpUrl: "https://mailchimp.com",
-    mailChimpToken: "MAILCHIMP TOKEN HERE",
-    youtube: "", // YOUR YOUTUBE PROFILE HERE
-    github: "", // YOUR GITHUB PROFILE HERE 
-    pinterest: "", // YOUR PINTEREST PROFILE HERE
-    facebook: "", // YOUR FACEBOOK PROFILE HERE
-    twitter: "", // YOUR TWITTER PROFILE HERE
+    title: 'MKO Mom',
+    description: "Madalyn Otto's Blog",
+    siteUrl: 'https://www.mkomom.com',
+    homepageHeader: "Welcome to Madalyn's Blog!",
+    homepageAbout:
+      'I am a mother of twin boys, I love spending time with my family and being outdoors. Come along with me on the journey of parenting!',
+    mailChimpUrl: 'https://mailchimp.com',
+    mailChimpToken: 'MAILCHIMP TOKEN HERE',
+    youtube: '', // YOUR YOUTUBE PROFILE HERE
+    github: '', // YOUR GITHUB PROFILE HERE
+    pinterest: '', // YOUR PINTEREST PROFILE HERE
+    facebook: '', // YOUR FACEBOOK PROFILE HERE
+    twitter: '', // YOUR TWITTER PROFILE HERE
   },
   plugins: [
     'gatsby-plugin-sitemap',
@@ -41,13 +42,13 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -72,8 +73,8 @@ module.exports = {
               }
             }
           `,
-            output: "/rss.xml",
-            title: "Gatsby RSS Feed",
+            output: '/rss.xml',
+            title: 'Gatsby RSS Feed',
           },
         ],
       },
@@ -97,26 +98,26 @@ module.exports = {
             },
           },
         ],
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Karla', 'Playfair Display', 'Lora']
-        }
-      }
+          families: ['Karla', 'Playfair Display', 'Lora'],
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "",
+        trackingId: '',
         head: false,
         anonymize: true,
         respectDNT: true,
         exclude: ['/success'],
-        cookieDomain: "tyra-starter.netlify.com",
-      }
-    }
-  ]
+        cookieDomain: 'mkomom.com',
+      },
+    },
+  ],
 }
