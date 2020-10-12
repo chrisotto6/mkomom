@@ -9,7 +9,7 @@ import '../styles/custom.tachyons.css'
 const About = (props) => (
   <React.Fragment>
     <Helmet>
-      <body className="bg-near-white mid-gray" />
+      <body className="bg-white mid-gray" />
     </Helmet>
     <Navbar />
     {props.children}
