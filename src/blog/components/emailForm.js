@@ -28,7 +28,7 @@ const EmailForm = () => {
             <input
               type="email"
               name="EMAIL"
-              className="ba b--dark-gray bg-near-white pa2 sans-serif w-100 mb2"
+              className="ba b--dark-gray bg-white pa2 sans-serif w-100 mb2"
               placeholder="Your Email"
             />
             <input
