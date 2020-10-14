@@ -1,0 +1,9 @@
+[build]
+  command = "yarn run build"
+  publish = "public"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
+
+[[plugins]]
+  package = "@sentry/netlify-build-plugin"
