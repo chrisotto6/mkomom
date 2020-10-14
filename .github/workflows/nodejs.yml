@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install && yarn lint
-      - run: yarn run build
+      - run: yarn run build:local
         env:
           CI: true
