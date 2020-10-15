@@ -1,6 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import Hero from '../../../blog/components/Hero'
+import Hero from '../../../blog/components/hero'
 
 describe('Hero', () => {
   it('renders correctly', () => {
