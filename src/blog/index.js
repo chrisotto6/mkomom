@@ -28,13 +28,13 @@ class BlogIndex extends React.Component {
           />
           {posts.map(({ node }) => (
             <Preview
-              key={node.frontmatter.slug}
-              fluidImage={node.frontmatter.postImage.childImageSharp.fluid}
-              slug={node.frontmatter.slug}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              category={node.frontmatter.category}
-              description={node.frontmatter.metaDescription}
+              key={node.slug}
+              fluidImage={node.postImage.fluid}
+              slug={node.slug}
+              title={node.title}
+              date={node.date}
+              category={node.category}
+              description={node.metaDescription}
             />
           ))}
           <div className="pv5 flex w-100">
@@ -62,26 +62,17 @@ export default BlogIndex
 
 export const blogListQuery = graphql`
   query posts($skip: Int!, $limit: Int!) {
-    posts: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "post" } } }
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+    posts: allContentfulPost(sort: { fields: date, order: DESC }, limit: $limit, skip: $skip) {
       edges {
         node {
-          frontmatter {
-            title
-            date(formatString: "MMM Do YYYY")
-            category
-            metaDescription
-            slug
-            postImage {
-              childImageSharp {
-                fluid(maxWidth: 1080, maxHeight: 512) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          title
+          date(formatString: "MMM Do YYYY")
+          category
+          metaDescription
+          slug
+          postImage {
+            fluid(maxWidth: 1080, maxHeight: 512) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

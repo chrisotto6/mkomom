@@ -14,19 +14,19 @@ const Index = ({ data }) => {
     <Layout>
       <Seo title={'Home Page'} description={data.site.siteMetadata.description} />
       <Hero
-        title={post.frontmatter.title}
-        image={post.frontmatter.postImage.childImageSharp.fluid}
-        to={post.frontmatter.slug}
-        description={post.frontmatter.description}
+        title={post.title}
+        image={post.postImage.fluid}
+        to={post.slug}
+        description={post.description}
       />
       <div className="flex flex-wrap center mw9 justify-around pb3">
         {data.cards.edges.map(({ node }) => (
           <Card
-            key={node.frontmatter.slug}
-            title={node.frontmatter.title}
-            image={node.frontmatter.postImage.childImageSharp.fluid}
-            to={node.frontmatter.slug}
-            description={node.frontmatter.description}
+            key={node.slug}
+            title={node.title}
+            image={node.postImage.fluid}
+            to={node.slug}
+            description={node.description}
           />
         ))}
       </div>
@@ -42,46 +42,29 @@ Index.propTypes = {
 
 export const query = graphql`
   query {
-    featuredPost: allMarkdownRemark(
-      limit: 1
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { type: { eq: "post" } } }
-    ) {
+    featuredPost: allContentfulPost(limit: 1, sort: { fields: date }) {
       edges {
         node {
-          frontmatter {
-            title
-            description: metaDescription
-            slug
-            postImage {
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          title
+          description: metaDescription
+          slug
+          postImage {
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
       }
     }
-    cards: allMarkdownRemark(
-      skip: 1
-      limit: 3
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { type: { eq: "post" } } }
-    ) {
+    cards: allContentfulPost(skip: 1, limit: 3, sort: { order: DESC, fields: date }) {
       edges {
         node {
-          frontmatter {
-            title
-            description: metaDescription
-            slug
-            postImage {
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          title
+          description: metaDescription
+          slug
+          postImage {
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

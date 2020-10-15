@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     navbarLinks: [
@@ -41,33 +43,37 @@ module.exports = {
       `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+            serialize: ({ query: { site, allContentfulPost } }) => {
+              return allContentfulPost.edges.map((edge) => {
+                return Object.assign({}, edge.node, {
+                  description:
+                    edge.node.childContentfulPostContentTextNode.childMarkdownRemark.excerpt,
+                  date: edge.node.date,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  custom_elements: [
+                    {
+                      'content:encoded':
+                        edge.node.childContentfulPostContentTextNode.childMarkdownRemark.html,
+                    },
+                  ],
                 })
               })
             },
             query: `
             {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-                filter: {frontmatter: {type: {eq: "post"}}}
-              ) {
+              allContentfulPost(limit: 1000, sort: {order: DESC, fields: [date]}) {
                 edges {
                   node {
-                    excerpt
-                    html
-                    frontmatter {
-                      slug
-                      title
-                      date
+                    childContentfulPostContentTextNode {
+                      childMarkdownRemark {
+                        excerpt
+                        html
+                      }
                     }
+                    slug
+                    title
+                    date
                   }
                 }
               }
@@ -117,6 +123,14 @@ module.exports = {
         respectDNT: true,
         exclude: ['/success'],
         cookieDomain: 'mkomom.com',
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_API_KEY,
+        downloadLocal: true,
       },
     },
   ],

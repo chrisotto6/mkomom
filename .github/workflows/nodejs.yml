@@ -10,6 +10,8 @@ jobs:
       ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.ALGOLIA_SEARCH_ONLY_API_KEY	}}
       GATSBY_DISQUS_NAME: ${{ secrets.GATSBY_DISQUS_NAME	}}
       GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID}}
+      CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
+      CONTENTFUL_API_KEY: ${{ secrets.CONTENTFUL_API_KEY }}
     strategy:
       matrix:
         node-version: [12.x]
