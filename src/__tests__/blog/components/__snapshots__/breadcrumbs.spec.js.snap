@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs renders correctly 1`] = `
+<div
+  className="w-100 f6 pv3 flex items-center tracked ttu sans-serif justify-around mw5"
+>
+  <a
+    className="dark-gray"
+    href="/"
+  >
+    Home
+  </a>
+  <span>
+     &gt; 
+  </span>
+  <a
+    className="dark-gray"
+    href="test"
+  >
+    test
+  </a>
+  <span>
+     &gt; 
+  </span>
+  <span
+    className="mid-gray"
+  >
+    test page
+  </span>
+</div>
+`;

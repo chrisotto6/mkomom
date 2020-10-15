@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../common/layouts/'
 import Seo from '../common/seo'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Privacy = () => (
   <Layout>

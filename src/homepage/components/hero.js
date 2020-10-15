@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import '../../common/styles/custom.tachyons.css'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Hero = (props) => {
   const { image, description, title, to } = props

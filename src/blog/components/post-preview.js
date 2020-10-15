@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Preview = (props) => {
   const { fluidImage, slug, title, date, category, description } = props

@@ -48,7 +48,7 @@ const SliderMenu = (props) => {
         to="/"
         className={'display ttu tracked dark-gray f3 no-underline menu__item pv5' + extraClasses}
       >
-        {props.siteTitle}
+        {props.title}
       </Link>
       {props.extraLinks.map((navLink) => (
         <MultiLink
@@ -71,7 +71,7 @@ const SliderMenu = (props) => {
 
 SliderMenu.propTypes = {
   active: PropTypes.object.isRequired,
-  siteTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   extraLinks: PropTypes.object.isRequired,
 }
 
@@ -102,7 +102,7 @@ export default class Navbar extends React.Component {
                   to
                   name
                 }
-                siteTitle: title
+                title
                 mailChimpUrl
               }
             }
@@ -122,7 +122,7 @@ export default class Navbar extends React.Component {
                   <FiMenu />
                 </button>
                 <Link to="/" className="display ttu tracked dark-gray f4 no-underline">
-                  {data.site.siteMetadata.siteTitle}
+                  {data.site.siteMetadata.title}
                 </Link>
                 <Link to="/" className="sans-serif ttu mid-gray f5 no-underline dn dib-l">
                   HOME
@@ -153,7 +153,7 @@ export default class Navbar extends React.Component {
             <SliderMenu
               active={this.state.menuToggle}
               extraLinks={data.site.siteMetadata.navbarLinks}
-              siteTitle={data.site.siteMetadata.siteTitle}
+              title={data.site.siteMetadata.title}
             />
           </React.Fragment>
         )}

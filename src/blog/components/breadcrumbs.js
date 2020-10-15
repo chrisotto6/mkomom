@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Breadcrumbs = (props) => {
   const { lastPath, lastName, currentPage } = props

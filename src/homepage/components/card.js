@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Card = (props) => {
   const { image, description, title, to } = props
