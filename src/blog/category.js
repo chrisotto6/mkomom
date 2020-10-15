@@ -23,13 +23,13 @@ export default class BlogIndex extends React.Component {
           <Breadcrumbs lastName={category} lastPath={`${category}`} currentPage={`Page ${page}`} />
           {posts.map(({ node }) => (
             <Preview
-              key={node.frontmatter.slug}
-              fluidImage={node.frontmatter.postImage.childImageSharp.fluid}
-              slug={node.frontmatter.slug}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              category={node.frontmatter.category}
-              description={node.frontmatter.metaDescription}
+              key={node.slug}
+              fluidImage={node.postImage.fluid}
+              slug={node.slug}
+              title={node.title}
+              date={node.date}
+              category={node.category}
+              description={node.metaDescription}
             />
           ))}
           <div className="pv5 flex w-100">
@@ -55,26 +55,22 @@ BlogIndex.propTypes = {
 
 export const blogListQuery = graphql`
   query categoryPosts($skip: Int!, $limit: Int!, $category: String!) {
-    posts: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "post" }, category: { eq: $category } } }
-      sort: { fields: frontmatter___date, order: DESC }
+    posts: allContentfulPost(
+      filter: { category: { eq: $category } }
+      sort: { fields: date, order: DESC }
       limit: $limit
       skip: $skip
     ) {
       edges {
         node {
-          frontmatter {
-            title
-            date(formatString: "MMM Do YYYY")
-            category
-            metaDescription
-            slug
-            postImage {
-              childImageSharp {
-                fluid(maxWidth: 1080, maxHeight: 512) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          title
+          date(formatString: "MMM Do YYYY")
+          category
+          metaDescription
+          slug
+          postImage {
+            fluid(maxWidth: 1080, maxHeight: 512) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

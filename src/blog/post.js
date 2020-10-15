@@ -16,8 +16,9 @@ const Post = ({ location, data }) => {
     title,
     slug,
     metaDescription,
-  } = data.post.frontmatter
-  const content = data.post.html
+  } = data.post.edges[0].node
+  const content =
+    data.post.edges[0].node.childContentfulPostContentTextNode.childMarkdownRemark.html
   return (
     <Layout>
       <Seo
@@ -26,14 +27,14 @@ const Post = ({ location, data }) => {
         date={dateOriginal}
         description={metaDescription}
         author={author}
-        image={data.post.frontmatter.postImage.childImageSharp.original.src}
+        image={data.post.edges[0].node.postImage.file.url}
       />
       <MetaSeo title={title} description={metaDescription} />
       <Hero author={author} date={date} category={category} title={title} />
       <Body
         content={content}
         description={metaDescription}
-        image={data.post.frontmatter.postImage.childImageSharp.original.src}
+        image={data.post.edges[0].node.postImage.file.url}
         location={location}
       />
     </Layout>
@@ -49,31 +50,37 @@ export default Post
 
 export const query = graphql`
   query($slug: String!) {
-    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        date(formatString: "MMM Do, YYYY")
-        dateOriginal: date
-        category
-        author
-        title
-        metaDescription
-        slug
-        postImage {
-          childImageSharp {
-            original {
-              src
+    post: allContentfulPost(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          childContentfulPostContentTextNode {
+            childMarkdownRemark {
+              html
             }
+          }
+          date(formatString: "MMM Do, YYYY")
+          dateOriginal: date
+          category
+          author
+          title
+          metaDescription
+          slug
+          postImage {
             fluid(maxWidth: 1080) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyContentfulFluid_withWebp
+            }
+            file {
+              url
             }
           }
         }
       }
     }
-    date: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        date
+    date: allContentfulPost(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          date
+        }
       }
     }
   }

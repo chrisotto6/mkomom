@@ -14,23 +14,15 @@ const Suggested = () => {
       <StaticQuery
         query={graphql`
           query {
-            allMarkdownRemark(
-              limit: 2
-              sort: { order: DESC, fields: frontmatter___date }
-              filter: { frontmatter: { type: { eq: "post" } } }
-            ) {
+            allContentfulPost(limit: 2, sort: { order: DESC, fields: date }) {
               edges {
                 node {
-                  frontmatter {
-                    title
-                    slug
-                    metaDescription
-                    postImage {
-                      childImageSharp {
-                        fluid(maxWidth: 720) {
-                          ...GatsbyImageSharpFluid
-                        }
-                      }
+                  title
+                  slug
+                  metaDescription
+                  postImage {
+                    fluid(maxWidth: 720) {
+                      ...GatsbyContentfulFluid_withWebp
                     }
                   }
                 }
@@ -39,20 +31,16 @@ const Suggested = () => {
           }
         `}
         render={(data) =>
-          data.allMarkdownRemark.edges.map(({ node }) => (
-            <div className="w-100 mw6 tc mb4" key={node.frontmatter.slug}>
-              <Link to={node.frontmatter.slug}>
-                <Img
-                  className="h5"
-                  fluid={node.frontmatter.postImage.childImageSharp.fluid}
-                  alt={node.frontmatter.metaDescription}
-                />
+          data.allContentfulPost.edges.map(({ node }) => (
+            <div className="w-100 mw6 tc mb4" key={node.slug}>
+              <Link to={node.slug}>
+                <Img className="h5" fluid={node.postImage.fluid} alt={node.metaDescription} />
               </Link>
               <Link
                 className="f4 serif tc dib pv2 ph3 display dark-gray no-underline"
-                to={node.frontmatter.slug}
+                to={node.slug}
               >
-                {node.frontmatter.title}
+                {node.title}
               </Link>
             </div>
           ))

@@ -15,10 +15,15 @@ const Bio = () => (
               }
             }
           }
-          copy: markdownRemark(frontmatter: { name: { eq: "homepage__bio" } }) {
-            html
-            frontmatter {
+          copy: allContentfulCopy(filter: { name: { eq: "homepage__bio" } }) {
+            nodes {
+              name
               title
+              childContentfulCopyContentTextNode {
+                childMarkdownRemark {
+                  html
+                }
+              }
             }
           }
         }
@@ -27,10 +32,13 @@ const Bio = () => (
         <React.Fragment>
           <Img fluid={data.image.childImageSharp.fluid} alt="The Author" className="w-100 mw6" />
           <div className="w-100 pa2 mw6 mv4">
-            <span className="db f2 display dark-gray">{data.copy.frontmatter.title}</span>
+            <span className="db f2 display dark-gray">{data.copy.nodes[0].title}</span>
             <div
               className="lh-copy f5 serif mt4"
-              dangerouslySetInnerHTML={{ __html: data.copy.html }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.copy.nodes[0].childContentfulCopyContentTextNode.childMarkdownRemark.html,
+              }}
             />
           </div>
         </React.Fragment>
