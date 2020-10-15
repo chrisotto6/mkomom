@@ -48,6 +48,9 @@
       "files": ["*.spec.js", "*.integration.js"],
       "rules": {
         "no-unused-expressions": "off"
+      },
+      "env": {
+        "jest": true
       }
     }
   ],

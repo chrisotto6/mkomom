@@ -1,6 +1,5 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { StaticQuery } from 'gatsby'
 import Breadcrumbs from '../../../blog/components/breadcrumbs'
 
 describe('Breadcrumbs', () => {
