@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { FaPinterestP, FaFacebookF, FaTwitter, FaYoutube, FaGithub } from 'react-icons/fa'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -12,7 +12,7 @@ const Footer = () => {
         query {
           site {
             siteMetadata {
-              siteTitle: title
+              title
               mailChimpUrl
               pinterest
               facebook
@@ -27,7 +27,7 @@ const Footer = () => {
         <footer className="pa2 bg-dark-gray near-white pv5">
           <div className="flex flex-wrap justify-around w-100 mw9 center mb5">
             <div className="w-100 mw5 mb4">
-              <span className="display f2">{data.site.siteMetadata.siteTitle}</span>
+              <span className="display f2">{data.site.siteMetadata.title}</span>
               <hr />
               <div className="w-100 flex justify-around items-center pv2">
                 {data.site.siteMetadata.facebook && (
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-column">
               <span className="near-white sans-serif f5 tracked mb3 db">
-                WRITING BY {data.site.siteMetadata.siteTitle}
+                WRITING BY {data.site.siteMetadata.title}
               </span>
               <Link to="/blog" className="near-white sans-serif f5 tracked pv1 db">
                 ALL POSTS
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-column">
               <span className="near-white sans-serif f5 tracked mb3 db">
-                MORE ON {data.site.siteMetadata.siteTitle}
+                MORE ON {data.site.siteMetadata.title}
               </span>
               <Link to="/about" className="near-white sans-serif f5 tracked pv1 db">
                 ABOUT US

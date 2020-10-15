@@ -2,7 +2,7 @@ import React from 'react'
 import EmailForm from './emailForm.js'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Suggested = () => {
   return (

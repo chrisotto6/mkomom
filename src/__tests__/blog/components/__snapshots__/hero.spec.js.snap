@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders correctly 1`] = `
+<div
+  className="bg-washed-green ph2 pv5 flex flex-column justify-center items-center"
+>
+  <a
+    className="sans-serif ttu mid-gray tracked f6"
+    href="/test"
+  >
+    test
+  </a>
+  <h1
+    className="dark-gray display fw4 f1-l f2 tc"
+  >
+    test title
+  </h1>
+  <span
+    className="sans-serif tracked ttu f6 mb2"
+  >
+    by 
+    Chris Otto
+  </span>
+  <span
+    className="sans-serif tracked ttu f6"
+  >
+    10-06-1988
+  </span>
+</div>
+`;

@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+Array [
+  <div
+    className="bg-white flex w-100 vh-7 pv3 flex justify-between items-center top-0 z-999 bb b--light-gray"
+    style={
+      Object {
+        "position": "sticky",
+      }
+    }
+  >
+    <div
+      className="w-100 mw8 flex justify-between justify-around-l items-center ph4 pa2-ns"
+    >
+      <button
+        className="ttu tracked dark-gray f4 no-underline bn bg-transparent pointer"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </button>
+      <a
+        className="display ttu tracked dark-gray f4 no-underline"
+        href="/"
+      />
+      <a
+        className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
+        href="/"
+      >
+        HOME
+      </a>
+      <a
+        className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
+        href="/makeup"
+      >
+        Makeup
+      </a>
+      <a
+        className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
+        href="/lifestyle"
+      >
+        Lifestyle
+      </a>
+      <a
+        className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
+        href="/blog"
+      >
+        blog
+      </a>
+    </div>
+    <div
+      className="dn w-100 mw5 flex-l justify-around items-center"
+    >
+      <a
+        className="sans-serif ttu light-red f5 no-underline dn dib-l"
+      >
+        SIGN UP
+      </a>
+      <span
+        className="sans-serif mid-gray dn dib-l"
+      >
+        |
+      </span>
+      <a
+        className="sans-serif ttu mid-gray f5 no-underline dn dib-l"
+        href="/about"
+      >
+        ABOUT
+      </a>
+    </div>
+  </div>,
+  <div
+    className="flex flex-column justify-center items-center bg-washed-green fixed top z-max w-100 ease h0"
+  >
+    <a
+      className="display ttu tracked dark-gray f3 no-underline menu__item pv5 dn"
+      href="/"
+    />
+    <a
+      className="sans-serif ttu mid-gray f5 no-underline menu__item pv3 dn"
+      href="/makeup"
+    >
+      Makeup
+    </a>
+    <a
+      className="sans-serif ttu mid-gray f5 no-underline menu__item pv3 dn"
+      href="/lifestyle"
+    >
+      Lifestyle
+    </a>
+    <a
+      className="sans-serif ttu mid-gray f5 no-underline menu__item pv3 dn"
+      href="/blog"
+    >
+      blog
+    </a>
+    <a
+      className="sans-serif ttu mid-gray f5 no-underline menu__item pv3 dn"
+      href="/about"
+    >
+      About
+    </a>
+  </div>,
+  <p>
+    test
+  </p>,
+  <footer
+    className="pa2 bg-dark-gray near-white pv5"
+  >
+    <div
+      className="flex flex-wrap justify-around w-100 mw9 center mb5"
+    >
+      <div
+        className="w-100 mw5 mb4"
+      >
+        <span
+          className="display f2"
+        />
+        <hr />
+        <div
+          className="w-100 flex justify-around items-center pv2"
+        />
+      </div>
+      <div
+        className="flex flex-column"
+      >
+        <span
+          className="near-white sans-serif f5 tracked mb3 db"
+        >
+          WRITING BY 
+        </span>
+        <a
+          className="near-white sans-serif f5 tracked pv1 db"
+          href="/blog"
+        >
+          ALL POSTS
+        </a>
+        <a
+          className="near-white sans-serif f5 tracked pv1 db"
+          href="/rss.xml"
+        >
+          RSS FEED
+        </a>
+      </div>
+      <div
+        className="flex flex-column"
+      >
+        <span
+          className="near-white sans-serif f5 tracked mb3 db"
+        >
+          MORE ON 
+        </span>
+        <a
+          className="near-white sans-serif f5 tracked pv1 db"
+          href="/about"
+        >
+          ABOUT US
+        </a>
+        <a
+          className="near-white sans-serif f5 tracked pv1 db"
+        >
+          NEWS LETTER
+        </a>
+      </div>
+    </div>
+    <div
+      className="w-100 mw9 center silver mb3"
+    >
+      <div
+        className="w-100 bb b--mid-gray mv3"
+      />
+      <div
+        className="flex w-100 mw6 items-center justify-center justify-start-ns"
+      >
+        <a
+          className="silver sans-serif f5 tracked pv1 db mh1"
+          href="/sitemap.xml"
+        >
+          SITEMAP
+        </a>
+        <span
+          className="mh1"
+        >
+          |
+        </span>
+        <a
+          className="silver sans-serif f5 tracked pv1 db mh1"
+          href="/privacy"
+        >
+          PRIVACY
+        </a>
+      </div>
+    </div>
+    <div
+      className="w-100 mw9 silver center sans-serif f6"
+    >
+      <p>
+        © 
+        2020
+         by Madalyn Otto
+      </p>
+    </div>
+  </footer>,
+]
+`;

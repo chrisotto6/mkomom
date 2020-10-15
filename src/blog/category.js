@@ -5,25 +5,22 @@ import { Link, graphql } from 'gatsby'
 import Breadcrumbs from './components/breadcrumbs'
 import Preview from './components/post-preview.js'
 import Seo from '../common/seo'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 export default class BlogIndex extends React.Component {
   render() {
     const posts = this.props.data.posts.edges
     const hasNext = this.props.data.posts.pageInfo.hasNextPage
     const category = this.props.pageContext.category
+    const page = this.props.pageContext.pageNumber
     return (
       <Layout>
-        <Seo title={`Posts Tagged ${category} - Page ${this.props.pageContext.pageNumber}`} />
+        <Seo title={`Posts Tagged ${category} - Page ${page}`} />
         <div className="pv5 flex items-center justify-center bg-washed-green">
           <h1 className="fw1 tc f2 display">Posts Tagged {category}</h1>
         </div>
         <div className="mw9 center">
-          <Breadcrumbs
-            lastName={category}
-            lastPath={`${category}`}
-            currentPage={`Page ${this.props.pageContext.pageNumber}`}
-          />
+          <Breadcrumbs lastName={category} lastPath={`${category}`} currentPage={`Page ${page}`} />
           {posts.map(({ node }) => (
             <Preview
               key={node.frontmatter.slug}

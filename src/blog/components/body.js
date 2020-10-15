@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Sidebar from './sidebar.js'
 import Suggested from './suggested.js'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 import '../../common/styles/custom.tachyons.css'
 import '../styles/grid.css'
 

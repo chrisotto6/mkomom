@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FaPinterestP, FaFacebookF } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { StaticQuery, graphql } from 'gatsby'
-import 'tachyons'
+import 'tachyons/css/tachyons.css'
 
 const Sidebar = (props) => {
   let { desc, img, location } = props
