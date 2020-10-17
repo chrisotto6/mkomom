@@ -133,5 +133,11 @@ module.exports = {
         downloadLocal: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+      },
+    },
   ],
 }
