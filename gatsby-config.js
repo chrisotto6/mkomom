@@ -13,8 +13,9 @@ module.exports = {
     homepageHeader: "Welcome to Madalyn's Blog!",
     homepageAbout:
       'I am a mother of twin boys, I love spending time with my family and being outdoors. Come along with me on the journey of parenting!',
-    mailChimpUrl: 'https://mailchimp.com',
-    mailChimpToken: 'MAILCHIMP TOKEN HERE',
+    mailChimpUrl:
+      'https://mkomom.us2.list-manage.com/subscribe/post?u=ea497506761c4464d43936c65&amp;id=13ea6a9209',
+    mailChimpToken: 'b_ea497506761c4464d43936c65_13ea6a9209',
     youtube: '', // YOUR YOUTUBE PROFILE HERE
     github: '', // YOUR GITHUB PROFILE HERE
     pinterest: '', // YOUR PINTEREST PROFILE HERE
@@ -131,6 +132,12 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_API_KEY,
         downloadLocal: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
       },
     },
   ],
