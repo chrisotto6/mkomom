@@ -46,7 +46,7 @@
     "cypress": "^5.4.0",
     "cypress-axe": "^0.8.1",
     "dotenv": "^8.2.0",
-    "eslint": "^7.0.0",
+    "eslint": "^7.12.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.14.0",
     "eslint-plugin-graphql": "^4.0.0",
