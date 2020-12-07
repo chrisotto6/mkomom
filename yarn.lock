@@ -7341,6 +7341,13 @@ gatsby-plugin-utils@^0.4.0:
   dependencies:
     joi "^17.2.1"
 
+gatsby-plugin-utils@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.5.0.tgz#5d0c0b9589b673f422e09e3e2e80bafbe3457505"
+  integrity sha512-Wvzt970TWr+cDdFdXjFmJ5rQEk9CbbbHzGo5GHOwfphXOTwp7/oKbTZoiGBm9M9Tf9Rdz6ph18j2ixdC0fy2Jw==
+  dependencies:
+    joi "^17.2.1"
+
 gatsby-plugin-web-font-loader@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-web-font-loader/-/gatsby-plugin-web-font-loader-1.0.4.tgz#c50bdb0c1980110b3fd213a5be70feb2459514c3"
@@ -7451,10 +7458,10 @@ gatsby-remark-images@^3.7.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-source-contentful@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.1.1.tgz#d293eb9f18a1703b54f53291b7aade3bc387f190"
-  integrity sha512-lehKMO+gM9t41HghhZZfKI2VVDw3BWrF76Wouv7zHozRRKtKek3VSwgvynHwNMkf42TSHvJRb2Sher+pAElxTA==
+gatsby-source-contentful@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.2.0.tgz#cef973fafc7ff8031f1107de821dfbb446dc129a"
+  integrity sha512-dkUD0MCqb6eROONmLXZZm737r7ICJHhlFH1S8zbO3pEyAgGMag/MX08GPSGCup0lKmIyLTWbULR0JNfD6TQZ3A==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@contentful/rich-text-react-renderer" "^14.1.2"
@@ -7466,9 +7473,9 @@ gatsby-source-contentful@^4.1.1:
     chalk "^4.1.0"
     contentful "^7.14.12"
     fs-extra "^9.0.1"
-    gatsby-core-utils "^1.5.0"
-    gatsby-plugin-utils "^0.4.0"
-    gatsby-source-filesystem "^2.6.1"
+    gatsby-core-utils "^1.6.0"
+    gatsby-plugin-utils "^0.5.0"
+    gatsby-source-filesystem "^2.7.0"
     is-online "^8.5.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.20"
@@ -7476,24 +7483,24 @@ gatsby-source-contentful@^4.1.1:
     progress "^2.0.3"
     qs "^6.9.4"
 
-gatsby-source-filesystem@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.6.1.tgz#28529fadbcbdd61a4257c8561200bfc1a8d5556c"
-  integrity sha512-XQvQewST3uH8bDjyLMv5srqc0Hh1eIzVkPLMXpcWoszlUX/MSCdY8+boZjLAx8YK0O65MLCr66sV9qFDBldjAw==
+gatsby-source-filesystem@^2.6.1, gatsby-source-filesystem@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.7.0.tgz#09da0ecfb85a6527858029d38b7bc2c68c9a91a3"
+  integrity sha512-SpIwHe89LLwgwNUEcHaRCe3J5+7ODgdJLh/PhJdSpmEzeHQRtLAfInNuoTMs8pJ53W+1HI/ph3/HXSAPddi/VA==
   dependencies:
     "@babel/runtime" "^7.12.5"
     better-queue "^3.8.10"
-    chokidar "^3.4.2"
+    chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^1.5.0"
+    gatsby-core-utils "^1.6.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
     pretty-bytes "^5.4.1"
     progress "^2.0.3"
     valid-url "^1.0.9"
-    xstate "^4.13.0"
+    xstate "^4.14.0"
 
 gatsby-telemetry@^1.5.1:
   version "1.5.1"
@@ -16495,10 +16502,15 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.11.0, xstate@^4.13.0, xstate@^4.9.1:
+xstate@^4.11.0, xstate@^4.9.1:
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.13.0.tgz#0be22ceb8bae2bc6a025fab330fe44204d76771c"
   integrity sha512-UnUJJzP2KTPqnmxIoD/ymXtpy/hehZnUlO6EXqWC/72XkPb15p9Oz/X4WhS3QE+by7NP+6b5bCi/GTGFzm5D+A==
+
+xstate@^4.14.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.15.0.tgz#4a27173666f7c8f0574a64b849f2da26f9641e7b"
+  integrity sha512-VXmJgkh1u2ejpNBSqdQLTU9V0YIn7clJ+4a3P/G/AJGyXwpyf8Ykf+k7I7UptccpmQktcPHPzLTtLctp+8qURA==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
