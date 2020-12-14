@@ -7454,10 +7454,10 @@ gatsby-remark-images@^3.7.1:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-source-contentful@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.2.0.tgz#cef973fafc7ff8031f1107de821dfbb446dc129a"
-  integrity sha512-dkUD0MCqb6eROONmLXZZm737r7ICJHhlFH1S8zbO3pEyAgGMag/MX08GPSGCup0lKmIyLTWbULR0JNfD6TQZ3A==
+gatsby-source-contentful@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.2.1.tgz#48222ea622a18b9a3795d38af35c75dea1718c00"
+  integrity sha512-dkkQRQZ4uAm0o6q47iEGlEoYOL5I/XspKzT752h+jUswBV4IVWzXAPsCyZdbfC5pSFbGt3KxFGigIQeYN4GBMg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@contentful/rich-text-react-renderer" "^14.1.2"
