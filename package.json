@@ -56,6 +56,6 @@
     "eslint-plugin-react": "^7.21.5",
     "prettier": "^2.2.1",
     "react-test-renderer": "^16.14.0",
-    "start-server-and-test": "^1.11.6"
+    "start-server-and-test": "^1.11.7"
   }
 }
