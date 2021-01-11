@@ -7186,7 +7186,7 @@ gatsby-cli@^2.17.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.7.1, gatsby-core-utils@^1.8.0:
+gatsby-core-utils@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.8.0.tgz#712579cd94d28c71f50202f073e15b8781f8b195"
   integrity sha512-MurWnytVVG9rOai0oAdcCsLODqj7P7Y9ndoAswHDk6hrlsWwiRMOsDS1kEyL7n2BM7lhgzZ+gz9OaOukqU1BhA==
@@ -7343,13 +7343,6 @@ gatsby-plugin-typescript@^2.10.0:
     "@babel/runtime" "^7.12.5"
     babel-plugin-remove-graphql-queries "^2.14.0"
 
-gatsby-plugin-utils@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.6.0.tgz#ec40fe484e1a46e81175adbf9cc4d6eee9c5dd35"
-  integrity sha512-xoniyZtU1NLQJtb1JQaGQOjt7rriJcklfSaUnWfWojg0HmOxs+tm1ImpfHL9AOhNkVGim/YbQFXZqOQj/oUM+Q==
-  dependencies:
-    joi "^17.2.1"
-
 gatsby-plugin-utils@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.7.0.tgz#bc511319a25241b31456f8178b8414bae8c48838"
@@ -7467,10 +7460,10 @@ gatsby-remark-images@^3.9.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-source-contentful@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.3.1.tgz#3159e83776dfcf056a93798fd51f429dc9ebf273"
-  integrity sha512-XvEiRhVjqd1JIT8VF1SS958iEGuA+lyvHOhsV9P4hCDM58eN/VF34cXkEohXDjOH29I4e39JJi+1KLN1CU59cw==
+gatsby-source-contentful@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-4.4.0.tgz#ef49a205e41b631e1fa3fb660eb3bdbe88a226fe"
+  integrity sha512-wHl9PCCm0CagtFdipdMxU8wSS1lnqZz+I73rCK+SV8qlOCYrLfBOS8RHe44NYb70qOsM1XSym0MCa1itwVw4ew==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@contentful/rich-text-react-renderer" "^14.1.2"
@@ -7482,9 +7475,9 @@ gatsby-source-contentful@^4.3.1:
     chalk "^4.1.0"
     contentful "^7.14.12"
     fs-extra "^9.0.1"
-    gatsby-core-utils "^1.7.1"
-    gatsby-plugin-utils "^0.6.0"
-    gatsby-source-filesystem "^2.8.1"
+    gatsby-core-utils "^1.8.0"
+    gatsby-plugin-utils "^0.7.0"
+    gatsby-source-filesystem "^2.9.0"
     is-online "^8.5.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.20"
@@ -7492,7 +7485,7 @@ gatsby-source-contentful@^4.3.1:
     progress "^2.0.3"
     qs "^6.9.4"
 
-gatsby-source-filesystem@^2.8.1, gatsby-source-filesystem@^2.9.0:
+gatsby-source-filesystem@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.9.0.tgz#df89799456dc7edc22c36ea6cc3060e25287bb48"
   integrity sha512-aKsb5GnnYwhAzCJZ9ChMWZqd1QhN6VGCEX3UAM/XuG6LSoqLmWyPUXo687n2ULpNPZfwb0X+HZRYzUhkje1UZA==
